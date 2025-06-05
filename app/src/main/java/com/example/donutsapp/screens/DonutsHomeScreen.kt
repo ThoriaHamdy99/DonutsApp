@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -45,7 +46,7 @@ fun DonutsHomeScreen() {
         modifier = Modifier
             .fillMaxSize()
             .background(WhiteBackgroundColor)
-            .padding(start = 38.dp, end = 38.dp, top = 81.dp)
+            .padding(top = 81.dp)
     ) {
         TitleSearchSection()
         OffersSection()
@@ -57,7 +58,8 @@ fun DonutsHomeScreen() {
 @Composable
 fun BottomActionBar() {
     Row(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 34.dp),
+        modifier = Modifier.fillMaxWidth()
+        .padding(start = 38.dp, end = 38.dp, top = 34.dp, bottom = 34.dp),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Image(
@@ -91,7 +93,8 @@ fun BottomActionBar() {
 @Composable
 fun DonutsSection() {
     Column(
-        modifier = Modifier.padding(top = 46.dp)
+        modifier = Modifier
+            .padding(top = 46.dp)
     ) {
         Text(
             text = "Donuts",
@@ -100,32 +103,33 @@ fun DonutsSection() {
             fontSize = 20.sp,
             lineHeight = 24.sp,
             letterSpacing = 0.sp,
-            color = BlackColor
+            color = BlackColor,
+            modifier = Modifier.padding(horizontal = 38.dp)
         )
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .horizontalScroll(rememberScrollState())
+
+                .horizontalScroll(rememberScrollState()),
         ) {
+            Spacer(Modifier.width(38.dp))
             Box(
-                modifier = Modifier.height(167.dp)
+                modifier = Modifier.height(167.dp).width(138.dp)
             ) {
-                Image(
-                    painter = painterResource(R.drawable.donut_image_3),
-                    contentDescription = "favourite icon",
-                    modifier = Modifier.size(width = 137.dp, height = 138.dp)
-                )
                 Column(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(
-                            top = 55.dp, start = 11.dp, end = 11.dp
-                        )
+                        .padding(top = 55.dp)
                         .shadow(
-                            elevation = 8.dp,
-                            shape = RoundedCornerShape(20.dp, 20.dp, 10.dp, 10.dp),
-                            ambientColor = BlackColor.copy(0.1f),
-                            spotColor = BlackColor.copy(0.1f)
+                            elevation = 30.dp,
+                            shape = RoundedCornerShape(15.dp),
+                            ambientColor = BlackColor,
+                            spotColor = BlackColor.copy(0.2f)
+                        )
+                        .fillMaxWidth()
+                        .height(111.dp)
+                        .background(color = WhiteBackgroundColor)
+                        .padding(
+                            start = 11.dp, end = 11.dp
                         ),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
@@ -160,27 +164,31 @@ fun DonutsSection() {
                         textAlign = TextAlign.Center
                     )
                 }
-            }
-
-            Box(
-                modifier = Modifier.height(167.dp)
-            ) {
                 Image(
-                    painter = painterResource(R.drawable.donut_image_4),
+                    painter = painterResource(R.drawable.donut_image_3),
                     contentDescription = "favourite icon",
                     modifier = Modifier.size(width = 137.dp, height = 138.dp)
                 )
+            }
+            Spacer(Modifier.width(21.dp))
+            Box(
+                modifier = Modifier.height(167.dp).width(138.dp)
+            ) {
                 Column(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(
-                            top = 55.dp, start = 11.dp, end = 11.dp
-                        )
+
+                        .padding(top = 55.dp)
                         .shadow(
-                            elevation = 8.dp,
-                            shape = RoundedCornerShape(20.dp, 20.dp, 10.dp, 10.dp),
-                            ambientColor = BlackColor.copy(0.1f),
-                            spotColor = BlackColor.copy(0.1f)
+                            elevation = 30.dp,
+                            shape = RoundedCornerShape(15.dp),
+                            ambientColor = BlackColor,
+                            spotColor = BlackColor.copy(0.2f)
+                        )
+                        .fillMaxWidth()
+                        .height(111.dp)
+                        .background(color = WhiteBackgroundColor)
+                        .padding(
+                            start = 11.dp, end = 11.dp
                         ),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
@@ -215,26 +223,31 @@ fun DonutsSection() {
                         textAlign = TextAlign.Center
                     )
                 }
-            }
-            Box(
-                modifier = Modifier.height(167.dp)
-            ) {
                 Image(
-                    painter = painterResource(R.drawable.donut_image_5),
+                    painter = painterResource(R.drawable.donut_image_4),
                     contentDescription = "favourite icon",
                     modifier = Modifier.size(width = 137.dp, height = 138.dp)
                 )
+            }
+            Spacer(Modifier.width(21.dp))
+            Box(
+                modifier = Modifier.height(167.dp).width(138.dp)
+            ) {
                 Column(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(
-                            top = 55.dp, start = 11.dp, end = 11.dp
-                        )
+
+                        .padding(top = 55.dp)
                         .shadow(
-                            elevation = 8.dp,
-                            shape = RoundedCornerShape(20.dp, 20.dp, 10.dp, 10.dp),
-                            ambientColor = BlackColor.copy(0.1f),
-                            spotColor = BlackColor.copy(0.1f)
+                            elevation = 30.dp,
+                            shape = RoundedCornerShape(15.dp),
+                            ambientColor = BlackColor,
+                            spotColor = BlackColor.copy(0.2f)
+                        )
+                        .fillMaxWidth()
+                        .height(111.dp)
+                        .background(color = WhiteBackgroundColor)
+                        .padding(
+                            start = 11.dp, end = 11.dp
                         ),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
@@ -269,7 +282,13 @@ fun DonutsSection() {
                         textAlign = TextAlign.Center
                     )
                 }
+                Image(
+                    painter = painterResource(R.drawable.donut_image_5),
+                    contentDescription = "favourite icon",
+                    modifier = Modifier.size(width = 137.dp, height = 138.dp)
+                )
             }
+            Spacer(Modifier.width(38.dp))
         }
     }
 }
@@ -277,7 +296,8 @@ fun DonutsSection() {
 @Composable
 fun OffersSection() {
     Column(
-        modifier = Modifier.padding(top = 54.dp)
+        modifier = Modifier
+            .padding(top = 54.dp,start = 38.dp, end = 38.dp)
     ) {
         Text(
             text = "Today Offers",
@@ -485,6 +505,7 @@ fun OffersSection() {
 fun TitleSearchSection() {
     Row(
         modifier = Modifier.fillMaxWidth()
+            .padding(start = 38.dp, end = 38.dp)
     ) {
         Column(
             modifier = Modifier.weight(1f)
