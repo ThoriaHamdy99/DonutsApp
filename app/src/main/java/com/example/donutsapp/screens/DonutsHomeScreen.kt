@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -325,7 +326,8 @@ fun OffersSection() {
                         contentDescription = "favourite icon",
                         modifier = Modifier
                             .size(width = 137.dp, height = 138.dp)
-                            .align(Alignment.End)
+                            .align(Alignment.End),
+                        contentScale = ContentScale.Crop
                     )
                     Text(
                         text = "Strawberry Wheel",
@@ -416,7 +418,8 @@ fun OffersSection() {
                         contentDescription = "favourite icon",
                         modifier = Modifier
                             .size(width = 137.dp, height = 138.dp)
-                            .align(Alignment.End)
+                            .align(Alignment.End),
+                        contentScale = ContentScale.Crop
                     )
                     Text(
                         text = "Chocolate Glaze",
