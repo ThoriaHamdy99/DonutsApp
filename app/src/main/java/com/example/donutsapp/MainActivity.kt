@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.example.donutsapp.screens.DonutsHomeScreen
 import com.example.donutsapp.screens.GonutsWithDonuts
 import com.example.donutsapp.ui.theme.DonutsAppTheme
 
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
                             .fillMaxSize()
                             .statusBarsPadding()
                     ) {
-                        GonutsWithDonuts()
+                        DonutsHomeScreen()
                     }
                 }
             }

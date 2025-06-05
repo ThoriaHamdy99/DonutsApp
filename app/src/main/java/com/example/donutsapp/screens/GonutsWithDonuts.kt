@@ -20,11 +20,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.donutsapp.R
-import com.example.donutsapp.ui.theme.GonutsWithDonutsButtonBackgroundColor
-import com.example.donutsapp.ui.theme.GonutsWithDonutsButtonColor
-import com.example.donutsapp.ui.theme.GonutsWithDonutsColor
+import com.example.donutsapp.ui.theme.WhiteBackgroundColor
+import com.example.donutsapp.ui.theme.BlackColor
+import com.example.donutsapp.ui.theme.RoseBackgroundColor
 import com.example.donutsapp.ui.theme.GonutsWithDonutsDescriptionColor
-import com.example.donutsapp.ui.theme.GonutsWithDonutsTitleColor
+import com.example.donutsapp.ui.theme.TitleColor
 import com.example.donutsapp.ui.theme.InterFont
 
 @Composable
@@ -32,7 +32,7 @@ fun GonutsWithDonuts() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(GonutsWithDonutsColor)
+            .background(RoseBackgroundColor)
     ) {
         Image(
             painter = painterResource(R.drawable.donuts_background),
@@ -50,7 +50,7 @@ fun GonutsWithDonuts() {
                 text = "Gonuts\n" +
                         "with\n" +
                         "Donuts",
-                color = GonutsWithDonutsTitleColor,
+                color = TitleColor,
                 fontFamily = InterFont,
                 fontWeight = FontWeight.Bold,
                 fontSize = 54.sp,
@@ -72,13 +72,13 @@ fun GonutsWithDonuts() {
                     .padding(top = 60.dp)
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(50.dp))
-                    .background(GonutsWithDonutsButtonBackgroundColor)
+                    .background(WhiteBackgroundColor)
                     .padding(vertical = 22.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = "Get Started",
-                    color = GonutsWithDonutsButtonColor,
+                    color = BlackColor,
                     fontFamily = InterFont,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 20.sp,
